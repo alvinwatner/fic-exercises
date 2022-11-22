@@ -24,7 +24,6 @@ class LtfmLoginView extends StatefulWidget {
                 hint: "Your email",
                 onChanged: (value) {},
               ),
-
               //! 2. Buat kode yang sama, atur value-nya menjadi:
               // value: 123456
               // hint: Your password

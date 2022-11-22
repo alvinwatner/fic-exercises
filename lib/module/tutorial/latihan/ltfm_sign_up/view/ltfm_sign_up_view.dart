@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ltfm_sign_up_controller.dart';
 
 class LtfmSignUpView extends StatefulWidget {
   const LtfmSignUpView({Key? key}) : super(key: key);
@@ -17,11 +16,43 @@ class LtfmSignUpView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
               //! 1. Buatlah textfield email
+              QTextField(
+                value: "demo@gmail.com",
+                label: "Email",
+                hint: "Your email",
+                onChanged: (value) {},
+              ),
+              const SizedBox(
+                height: 2.0,
+              ),
+
               //! 2. Buatlah textfield password
+              QTextField(
+                value: "123456",
+                label: "Password",
+                hint: "Your password",
+                obscure: true,
+                onChanged: (value) {},
+              ),
               //! 3. Buatlah textfield confirm password
+              QTextField(
+                value: "123456",
+                label: "Confirm Password",
+                hint: "Your password",
+                obscure: true,
+                onChanged: (value) {},
+              ),
               //! 4. Buat sebuah tombol,
+              ElevatedButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () => controller.doLogin(),
+              ),
               //gunakan icon: Icons.login
               //atur text-nya: Login
               //ketika di klik, panggil:

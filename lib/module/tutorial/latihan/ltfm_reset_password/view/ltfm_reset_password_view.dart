@@ -43,7 +43,26 @@ class LtfmResetPasswordView extends StatefulWidget {
                 child: Container(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
-                    children: const [],
+                    children: [
+                      QTextField(
+                        label: "Email",
+                        hint: "Your email",
+                        validator: Validator.email,
+                        value: "demo@gmail.com",
+                        onChanged: (value) {},
+                      ),
+                      const SizedBox(
+                        height: 30.0,
+                      ),
+                      ElevatedButton.icon(
+                        icon: const Icon(Icons.send),
+                        label: const Text("Reset password"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blueGrey,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
                   ),
                 ),
               ),
